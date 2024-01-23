@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About The Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+
+<body style="margin: 5%;">
+    <h1 style="margin: 3%;">About</h1>
+
+    <div>
+    </button>
+    <button class="site-nav_item">
+        <a href="homepage.html" style="text-decoration: none; color: inherit;">
+            Home
+        </a></button>
+    <button class="site-nav_item2"
+    onclick="myFunction()">☀︎</button>
+    </div>
+    <br><br>
+    <div style="text-align: left;">
+        <p>
+            Mythological Cowboys is an RPG for PC, Mac, Linux, Nintendo Switch and Xbox One. 
+            <br><br>
+            In this game, you can switch between two characters, each presenting different fighting
+            options and ailities. 
+            <br><br>
+            The story revolves around two drifters, who eventiually become bounty hunters for 
+            finantial reasons. The public knows them as "Jack J Millson" and "ap Saul". 
+            They travel and cross paths with mythological creatures and odd occurances from
+            all over the land.
+        </p>
+    </div>
+    <br><br>
+
+    <div style="text-align: left;">
+        <h3 style="margin: 5%;">Characters:</h3>
+        <div id="char-container" class="container" style="margin: 5%;">
+            <img id="defaultImage1" src="images/chars/MC.png" width="30%" alt="char1 defult" >
+            <img id="hoverImage1" src="images/chars/MCHover.png" width="30%" alt="char1 defult" style="display:none;">
+            <button class="btn"
+            onmouseover="document.getElementById('defaultImage1').style.display='none'; 
+            document.getElementById('hoverImage1').style.display='block';" 
+            onmouseout="document.getElementById('defaultImage1').style.display='block'; 
+            document.getElementById('hoverImage1').style.display='none';"
+            onclick="revealText()">Jack J.M.</button>
+
+                <div class="text-container">
+                    <p class="text" style="margin: 5%;">
+                        <strong>Jack J Millson</strong> is the main character of the story. He is a
+                        bounty hunter who meets his companion on a trip to hourseback mountain and 
+                        "team up" out of convinience. <br> His weapons are firearms, lasos and
+                        explosives. He is a longrange and shortrange fighter (if needed).
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        <br><br><br>
+        <div id="char-container" class="container" style="margin: 3%;">
+            <img id="defaultImage2" src="images/chars/FF.png" width="30%" alt="char2 defult" >
+            <img id="hoverImage2" src="images/chars/FFHover12.png" width="30%" alt="char2 defult" style="display:none;">
+            <button class="btn"
+            onmouseover="document.getElementById('defaultImage2').style.display='none'; 
+            document.getElementById('hoverImage2').style.display='block';" 
+            onmouseout="document.getElementById('defaultImage2').style.display='block'; 
+            document.getElementById('hoverImage2').style.display='none';"
+            onclick="revealText2()">Ap. Saul</button>
+
+                <div class="text-container2">
+                    <p class="text" style="margin: 5%;">
+                        <strong>Ap. Saul</strong> aka the vampire hunter of Springston, is the 
+                        travaling companion of Jack JM. He used to travel with a group of 
+                        mercinaries that called themselves "The Appostles" or "God's Judgment" 
+                        before they all died - leeaving him the soul surviver. 
+                        <br>He specialises in non-human "handling". His first solo job was a 
+                        vampire infestation in Springston, which earned him his nickname.
+                    </p>
+                </div>
+            </div>
+            
+            <script>
+                function revealText() {
+                    var textContainer = document.querySelector('.text-container');
+                    textContainer.classList.toggle('show');
+                }
+
+                function revealText2() {
+                    var textContainer = document.querySelector('.text-container2');
+                    textContainer.classList.toggle('show');
+                }
+
+            </script>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
